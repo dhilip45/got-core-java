@@ -3,6 +3,10 @@ package com.pack;
 import java.util.Scanner;
 
 public class Allpattern001 {
+	/**
+	 * @param args
+	 * this program is pramid pattern
+	 */
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -18,17 +22,23 @@ public class Allpattern001 {
 
                 // Check all conditions to print '*'
                 if (
-                    i == 0 || i == n - 1 ||        // Top and bottom border
-                    j == 0 || j == n - 1 ||      // Left and right border
+                    i == 0 || // top border  //1
+                    i == n - 1 || // bottom border 2
+                    j == 0 ||     //left border 3
+                    j == n - 1 ||  // right border 4
                     
-                    i ==(n/2) || j == (n/2) ||   // center line vertical
+                    i ==(n/2) || //center line border  5
+                    j == (n/2) || // Horizondal line vertical 6
                     
-                           i==j 							// center line horizontal
-                   || i+j ==(n-1)	||		// cross lines
+                           i==j 			// lift to right cross line  7 
+                   || i+j ==(n-1)
+                   ||		// right to left cross line 8
                    
-                   i+j ==(n/2) || j-i ==(n/2)  || // first and 2nd inside patten
+                   i+j ==(n/2) || // first square left to right 9
+                   j-i ==(n/2)  || // second square right to left patten 10
                    
-                   i-j==(n/2) || i+j ==(n-1)+(n/2) // 3rd fourth inside pattern
+                   i-j==(n/2) || // 3rd square left to right 11
+                    i+j ==(n-1)+(n/2) // 4th square inside pattern right to left
                    
                    
                 ) {
